@@ -32,6 +32,7 @@
     "eslint-config-jonnybuchanan": "2.0.3",
     "nwb": "0.8.1",
     "sw-precache": "^3.1.1",
-    "sw-toolbox": "^3.1.1"
+    "sw-toolbox": "^3.1.1",
+    "stats-webpack-plugin": "^0.6.1"
   }
 }
