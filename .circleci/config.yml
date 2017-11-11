@@ -26,7 +26,20 @@ jobs:
           name: Build application
           command: npm run build
 
-      # save cache
+      - run:
+          name: Install local server dependencies
+          command: npm install --no-save http-server
+
+      - run:
+          name: Start local server
+          command: node_modules/.bin/http-server ./public
+          background: true
+
+      - run:
+          name: Run lighthouse tests
+          command: sleep 5 && npm run check:perf
+
+
       - save_cache:
           paths:
             - node_modules

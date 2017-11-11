@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "npm run lint && cp node_modules/sw-toolbox/sw-toolbox.js public/sw-toolbox.js && nwb build && npm run precache",
+    "check:perf": "mkdir -p stats && lighthouse http://localhost:8080 --output json --perf --output-path ./stats/lighthouse.json",
     "lint": "eslint src",
     "lint:fix": "eslint --fix .",
     "start": "nwb serve",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "eslint-config-jonnybuchanan": "2.0.3",
+    "lighthouse": "^2.5.0",
     "nwb": "0.8.1",
     "sw-precache": "^3.1.1",
     "sw-toolbox": "^3.1.1",
