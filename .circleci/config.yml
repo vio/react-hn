@@ -39,6 +39,9 @@ jobs:
           name: Run lighthouse tests
           command: sleep 5 && npm run check:perf
 
+      - run:
+          name: Send stats to MoM
+          command: npm install --no-save mom-agent && node_modules/.bin/mom-agent
 
       - save_cache:
           paths:
