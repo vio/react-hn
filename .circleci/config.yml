@@ -27,12 +27,8 @@ jobs:
           command: npm run build
 
       - run:
-          name: Install local server dependencies
-          command: npm install --no-save http-server
-
-      - run:
           name: Start local server
-          command: node_modules/.bin/http-server ./public
+          command: npm start
           background: true
 
       - run:
